@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import shopiy from "../../public/shopify.jpg"
+import shopiy from "../../public/electrical3.jpeg"
 import customeWebApp from "../../public/Custom-Web-App-Development.jpg"
 import mobileApp from "../../public/Mobile-App-Development.jpg"
 import digitalMarketing from "../../public/Digital-Marketing-1.jpg"

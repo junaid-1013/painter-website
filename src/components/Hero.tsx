@@ -1,53 +1,76 @@
-import Image from "next/image";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import { Zoom } from "react-slideshow-image";
+'use client';
+import { useState } from "react";
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { RxDotFilled } from 'react-icons/rx';
 import "react-slideshow-image/dist/styles.css";
-import img1 from "../../public/1.jpg"
-import img2 from "../../public/2.jpg"
-import img3 from "../../public/4.png"
 
 
 const Hero = () => {
-
-    const images = [
-		img1,
-		img2,
-		img3
+	const slides = [
+		{
+			url: 'https://images.pexels.com/photos/267367/pexels-photo-267367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		},
+		{
+			url: 'https://images.pexels.com/photos/8821536/pexels-photo-8821536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		},
+		{
+			url: 'https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		},
+		{
+			url: 'https://thepropainters.com/wp-content/uploads/2021/12/dis-cephe-boya-1536x1024.jpg',
+		},
+		{
+			url: 'https://images.pexels.com/photos/8961401/pexels-photo-8961401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		},
 	];
 
-    const zoomInProperties = {
-		scale: 1,
-		duration: 5000,
-		transitionDuration: 300,
-		infinite: true,
-		prevArrow: (
-			<div className="ml-10 top-40 md:top-72">
-				<AiOutlineLeft className="h-8 w-8 text-[#111111] cursor-pointer" />
-			</div>
-		),
-		nextArrow: (
-				<div className="mr-10 top-40 md:top-72">
-				   <AiOutlineRight className="h-8 w-8 text-[#111111] cursor-pointer" />
-			    </div>
-		),
+	const [currentIndex, setCurrentIndex] = useState(0);
+
+	const prevSlide = () => {
+		const isFirstSlide = currentIndex === 0;
+		const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+		setCurrentIndex(newIndex);
 	};
-    return (
-        <div className="w-full h-screen">
-			<Zoom {...zoomInProperties}>
-				{images.map((each, index) => (
-					<div key={index} className="flex justify-center md:items-center items-start w-screen h-screen relative">
-						<Image
-							className="w-screen"
-							src={each}
-                            alt='Hero'
-						/>
+
+	const nextSlide = () => {
+		const isLastSlide = currentIndex === slides.length - 1;
+		const newIndex = isLastSlide ? 0 : currentIndex + 1;
+		setCurrentIndex(newIndex);
+	};
+
+	const goToSlide = (slideIndex: any) => {
+		setCurrentIndex(slideIndex);
+	};
+
+	return (
+		<div className='max-w-full h-[780px] w-full m-auto py-16 relative group'>
+			<div
+				style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+				className='w-full h-full bg-center bg-cover duration-500'
+			></div>
+			{/* Left Arrow */}
+			<div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+				<BsChevronCompactLeft onClick={prevSlide} size={30} />
+			</div>
+			{/* Right Arrow */}
+			<div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+				<BsChevronCompactRight onClick={nextSlide} size={30} />
+			</div>
+			<div className='flex top-4 justify-center py-2'>
+				{slides.map((slide, slideIndex) => (
+					<div
+						key={slideIndex}
+						onClick={() => goToSlide(slideIndex)}
+						className='text-2xl cursor-pointer'
+					>
+						<RxDotFilled />
 					</div>
 				))}
-			</Zoom>
+			</div>
 		</div>
 
 
-    )
+	)
 }
 
 export default Hero

@@ -87,7 +87,7 @@ export default function Home() {
         // }
         if (isValidForm) {
             setButtonText("Sending");
-            const mailtoLink = `mailto:info@painters.com?subject=${encodeURIComponent(
+            const mailtoLink = `mailto:arif.tech79@gmail.com?subject=${encodeURIComponent(
                 subject
             )}&body=${encodeURIComponent(
                 `Full Name: ${fullname}\nEmail: ${email}\nMessage: ${message}`
@@ -271,7 +271,7 @@ export default function Home() {
                                 fill="currentColor"
                             />
                         </svg>
-                        <p className="text-gray-500 font-light">+923265930300</p>
+                        <p className="text-gray-500 font-light">+971554079685</p>
                     </div>
                     <div className="card p-8 shadow rounded-md flex flex-row items-center space-x-4 hover:shadow-lg cursor-pointer transition duration-200">
                         <svg
@@ -290,7 +290,7 @@ export default function Home() {
                             />
                         </svg>
                         <p className="text-gray-500 font-light">
-                            info@painters.com
+                            arif.tech79@gmail.com
                         </p>
                     </div>
                     <div className="card p-8 shadow rounded-md flex flex-row items-center space-x-4 hover:shadow-lg cursor-pointer transition duration-200">
@@ -316,7 +316,7 @@ export default function Home() {
                             />
                         </svg>
                         <p className="text-gray-500 font-light">
-                            info@painters.com
+                            arif.tech79@gmail.com
                         </p>
                     </div>
                 </div>

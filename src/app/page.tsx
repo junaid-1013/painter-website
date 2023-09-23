@@ -3,7 +3,7 @@ import Hero from "@/components/Hero"
 import WhyYouChoseUs from "@/components/WhyYouChoseUs"
 import { ReviewCards } from "@/components/ReviewCards"
 import OurCoreServices from "@/components/OurCoreServices"
-import { News } from "@/components/News"
+import { Gallery } from "@/components/Gallery"
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 export default function Home() {
@@ -11,11 +11,11 @@ export default function Home() {
     <section className="w-full flex-center flex-col">
       <Hero/>
       <OurCoreServices/>
-      <News/>
+      <Gallery/>
       <WhyYouChoseUs />
       <ReviewCards />
       <FloatingWhatsApp
-        phoneNumber="+923265930300"
+        phoneNumber="+971554079685"
         accountName="Painters"
         avatar="https://www.canva.com/design/DAFt8mnRJyM/UqiZjOzMXasBYxZk-dWrIg/view?utm_content=DAFt8mnRJyM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
         allowEsc

@@ -75,8 +75,8 @@ const Navbar = () => {
                                 </Link>
                             </li>
                             <li className="text-white hover:text-white">
-                                <Link href="/news">
-                                    News
+                                <Link href="/gallery">
+                                    Gallery
                                 </Link>
                             </li>
                             <li className="text-white hover:text-white">

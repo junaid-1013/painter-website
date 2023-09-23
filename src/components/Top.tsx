@@ -15,10 +15,10 @@ const Top = () => {
                         height={20}
                         className="object-contain mr-2"
                     />
-                    <Link href="mailto:info@painters.com"
+                    <Link href="mailto:arif.tech79@gmail.com"
                         className="font-sans  text-white"
 
-                    >info@painters.com</Link>
+                    >arif.tech79@gmail.com</Link>
                 </div>
                 <div className="flex flex-row">
                     <Image
@@ -28,10 +28,10 @@ const Top = () => {
                         height={18}
                         className="object-contain mr-2"
                     />
-                    <Link href="tel:+923265930300"
+                    <Link href="tel:+971554079685"
                         className="font-sans  text-white"
 
-                    >+923265930300</Link>
+                    >+971554079685</Link>
                 </div>
             </div>
         </nav>
