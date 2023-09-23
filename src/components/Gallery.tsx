@@ -80,7 +80,7 @@ export const Gallery = () => {
                                 className="group relative cursor-pointer items-center justify-center overflow-hidden 
                                 hover:shadow-xl hover:shadow-black/30 rounded-lg hover:-translate-y-3
                                 transition-all duration-500 transform-gpu"> */}
-                                <div className="h-96 w-80">
+                                <div key={index} className="h-96 w-80">
                                     <Image
                                         className="h-full w-full cursor-pointer object-cover transition-transform duration-500 
                                         hover:scale-110"
