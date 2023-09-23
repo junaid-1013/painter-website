@@ -6,8 +6,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import gallery1 from "../../public/electrical1.jpg"
-import gallary2 from "../../public/blogs2.jpg"
-import gallary3 from "../../public/blogs3.png"
+import gallery2 from "../../public/painting6.jpeg"
+import gallary3 from "../../public/Glass3.jpeg"
 import gallery4 from "../../public/painting4.jpeg"
 
 
@@ -18,7 +18,7 @@ const articleData = [
         title: 'Maintaining A Beautiful Home With Kids',
     },
     {
-        imageSrc: gallary2,
+        imageSrc: gallery2,
         title: 'Know When To Prime Before You Paint',
     },
     {
@@ -75,12 +75,12 @@ export const Gallery = () => {
                     slidesPerView={4}
                 >
                     {articleData.map((article, index) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={index}>
                             {/* <div key={index}
                                 className="group relative cursor-pointer items-center justify-center overflow-hidden 
                                 hover:shadow-xl hover:shadow-black/30 rounded-lg hover:-translate-y-3
                                 transition-all duration-500 transform-gpu"> */}
-                                <div key={index} className="h-96 w-80">
+                                <div className="h-96 w-80">
                                     <Image
                                         className="h-full w-full cursor-pointer object-cover transition-transform duration-500 
                                         hover:scale-110"

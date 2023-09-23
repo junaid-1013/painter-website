@@ -2,9 +2,10 @@ import Image from "next/image"
 import Link from "next/link"
 
 import shopiy from "../../public/electrical3.jpeg"
-import customeWebApp from "../../public/Custom-Web-App-Development.jpg"
 import mobileApp from "../../public/Mobile-App-Development.jpg"
-import digitalMarketing from "../../public/Digital-Marketing-1.jpg"
+import img1 from "../../public/services-5.jpg"
+import img2 from "../../public/services-4.jpg"
+
 
 
 const services = [
@@ -15,7 +16,7 @@ const services = [
         description: "Set up your online business with the best eCommerce platform, Shopify. As the top Shopify developers in Pakistan, we ensure the success of your online store."
     },
     {
-        image: customeWebApp,
+        image: img1,
         alt: "Restoration Projects",
         title: "Restoration Projects",
         description: "We are the leading web development company in Pakistan that provides end-to-end custom web app development solutions to solve your unique business challenges."
@@ -27,7 +28,7 @@ const services = [
         description: "We provide full-cycle mobile application development services to develop high-performing and feature-rich mobile apps for both Android and iOS devices."
     },
     {
-        image: digitalMarketing,
+        image: img2,
         alt: "Residential Projects",
         title: "Residential Projects",
         description: "We offer digital marketing solutions such as SEO, Social Media Marketing, and Google Ads to help our clients achieve success with transformative marketing strategies."

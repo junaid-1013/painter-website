@@ -1,9 +1,9 @@
 import Image from "next/image"
 
 import shopiy from "../../../public/Plumbers8.jpg"
-import customeWebApp from "../../../public/Custom-Web-App-Development.jpg"
+import customeWebApp from "../../../public/Tile2.jpg"
 import mobileApp from "../../../public/Mobile-App-Development.jpg"
-import digitalMarketing from "../../../public/Digital-Marketing-1.jpg"
+import digitalMarketing from "../../../public/electrical3.jpeg"
 import crmSoftware from "../../../public/services-4.jpg"
 import seo from "../../../public/services-5.jpg"
 
