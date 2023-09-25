@@ -8,10 +8,10 @@ import "react-slideshow-image/dist/styles.css";
 const Hero = () => {
 	const slides = [
 		{
-			url: 'https://images.pexels.com/photos/267367/pexels-photo-267367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+			url: 'https://www.bergerpaints.com/blog/wp-content/uploads/2021/02/Dream-home.png',
 		},
 		{
-			url: 'https://images.pexels.com/photos/8821536/pexels-photo-8821536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+			url: 'https://www.bergerpaints.com/colour-magazine/Upload/Posting/Image/colour-story-bnr-august21.jpg',
 		},
 		{
 			url: 'https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',

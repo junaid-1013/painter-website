@@ -57,7 +57,7 @@ import painting11 from "../../../public/painting15.jpeg"
 
 const articleData = [
     {
-        image: electrical1,
+        image: "/electrical1.jpg",
         title: 'Maintaining A Beautiful Home With Kids',
     },
     {
@@ -95,6 +95,7 @@ const articleData = [
     {
         image: ac5,
         title: 'House Painting',
+
     },
     {
         image: ac6,
@@ -255,6 +256,8 @@ const GalleryCard = ({ image, title}: any) => (
                 className="h-full w-full object-cover transition-transform duration-500 
                          group-hover:rotate-3 group-hover:scale-125"
                 src={image}
+                width={1000}
+                height={1000}
                 alt={title}
             />
         </div>

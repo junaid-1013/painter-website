@@ -9,6 +9,8 @@ import gallery1 from "../../public/electrical1.jpg"
 import gallery2 from "../../public/painting6.jpeg"
 import gallary3 from "../../public/Glass3.jpeg"
 import gallery4 from "../../public/painting4.jpeg"
+import gallery5 from "../../public/Tile2.jpg"
+import gallery6 from "../../public/Door Polish 10.jpg"
 
 
 
@@ -30,11 +32,11 @@ const articleData = [
         title: 'House Painting',
     },
     {
-        imageSrc: gallary3,
+        imageSrc: gallery5,
         title: 'House Painting',
     },
     {
-        imageSrc: gallery4,
+        imageSrc: gallery6,
         title: 'House Painting',
     },
 ];
@@ -50,13 +52,13 @@ export const Gallery = () => {
                     </p>
                 </div>
             </div>
-            <div className="flex min-h-screen items-center justify-center px-16">
+            <div className="flex min-h-screen items-center justify-center px-16 -mt-[8rem]">
                 {/* <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"> */}
                 <Swiper
                     breakpoints={{
                         // width >= 300
                         300: {
-                            slidesPerView: 2,
+                            slidesPerView: 1,
                             spaceBetween: 100
                         },
                         // width >= 1000
@@ -83,7 +85,7 @@ export const Gallery = () => {
                                 <div className="h-96 w-80">
                                     <Image
                                         className="h-full w-full cursor-pointer object-cover transition-transform duration-500 
-                                        hover:scale-110"
+                                        hover:scale-110 rounded-lg"
                                         src={article.imageSrc}
                                         alt={article.title}
                                     />

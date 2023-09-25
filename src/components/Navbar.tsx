@@ -11,7 +11,7 @@ const Navbar = () => {
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-1 md:py-3 md:block">
-                        <Link href="/" className="flex ga[-2 flex-center">
+                        <Link href="/" className="flex gap-2 flex-center">
                             <Image
                                 src={logo}
                                 alt="Painters logo"
