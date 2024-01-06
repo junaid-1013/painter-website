@@ -58,7 +58,7 @@ const ServiceItem = ({ image, alt, title, description}: any) => (
                 </h1>
             </div>
             <p className="mb-3 pt-2 text-base text-left text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                {description}
+                {description}page
             </p>
         </div>
     </div>
@@ -71,21 +71,21 @@ const ServiceItem = ({ image, alt, title, description}: any) => (
 const OurCoreServices = () => {
     return (
         <>
-            <div className="flex mb-5 lg:-mb-16 items-center justify-center">
+            <div className="flex mb-5 items-center justify-center">
                 <div>
-                    <p className="mt-5 text-5xl text-center font-sans leading-[1.15] text-[#f5f5f5] sm:text-6xl">
+                    <h2 className="mt-5 text-5xl text-center font-sans lg:mb-20 lg:font-bold leading-[1.15] text-[#f5f5f5] sm:text-6xl">
                         Our Core Services
-                    </p>
+                    </h2>
                 </div>
             </div>
-            <div className="flex min-h-screen items-center justify-center">
+            <div className="flex items-center justify-center">
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
                     {services.map((service, index) => (
                         <ServiceItem key={index} {...service} />
                     ))}
                 </div>
             </div>
-            <div className="flex mb-5 lg:-mt-16 sm:mt-5 md:mt-5 items-center justify-center">
+            <div className="flex mb-5 sm:mt-5 md:mt-5 items-center justify-center lg:mt-20">
                 <Link href="/services">
                     <button className="relative border-2 border-[#fcb040] bg-transparent py-2.5 px-5 font-medium uppercase 
                     text-[#fcb040] transition-all before:absolute before:left-0 before:top-0 before:-z-10 before:h-full 

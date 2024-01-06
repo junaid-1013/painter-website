@@ -44,15 +44,15 @@ const articleData = [
 
 export const Gallery = () => {
     return (
-        <>
+        <section className="pt-24">
             <div className="flex mb-5 lg:-mb-16 items-center justify-center">
                 <div>
-                    <p className="mt-5 text-5xl text-center font-sans leading-[1.15] text-[#f5f5f5] sm:text-6xl">
+                    <p className="mt-5 text-5xl text-center font-sans leading-[1.15] text-[#f5f5f5] sm:text-6xl lg:font-bold">
                         Gallery
                     </p>
                 </div>
             </div>
-            <div className="flex min-h-screen items-center justify-center px-16 -mt-[8rem]">
+            <div className="flex items-center justify-center px-16 mt-[8rem]">
                 {/* <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"> */}
                 <Swiper
                     breakpoints={{
@@ -96,7 +96,7 @@ export const Gallery = () => {
                 </Swiper>
                 {/* </div> */}
             </div>
-            <div className="flex mb-5 lg:-mt-16 sm:mt-5 md:mt-5 items-center justify-center">
+            <div className="flex mb-5 lg:mt-20 sm:mt-5 md:mt-5 items-center justify-center lg:mb-20">
                 <Link href="/gallery">
                     <button className="relative border-2 border-[#fcb040] bg-transparent py-2.5 px-5 font-medium uppercase 
                     text-[#fcb040] transition-all before:absolute before:left-0 before:top-0 before:-z-10 before:h-full 
@@ -108,6 +108,6 @@ export const Gallery = () => {
                 </Link>
             </div>
 
-        </>
+        </section>
     )
 }

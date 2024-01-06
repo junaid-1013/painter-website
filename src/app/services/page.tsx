@@ -94,7 +94,7 @@ export default function Home() {
                     </p>
                 </div>
             </div>
-            <div className="flex min-h-screen items-center justify-center">
+            <div className="flex items-center justify-center">
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
                     {services.map((service, index) => (
                         <ServiceItem key={index} {...service} />
