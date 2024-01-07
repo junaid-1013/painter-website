@@ -32,8 +32,8 @@ export const Footer = () => {
                     </div>
             
           <ul className="items-center justify-center space-y-8 md:flex md:space-x-10 md:space-y-0 font-sans py-3">
-           {NAV_ITEMS.map((item)=>(
-            <li className="text-white hover:text-white">
+           {NAV_ITEMS.map((item, i)=>(
+            <li key={i} className="text-white hover:text-white">
               <Link href={item.link} legacyBehavior>
                 <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">{item.name}</a>
               </Link>

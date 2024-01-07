@@ -67,8 +67,8 @@ const Navbar = () => {
         </div>
         <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'}`}>
           <ul className="items-center justify-center space-y-8 md:flex md:space-x-10 md:space-y-0 font-sans py-3">
-           {NAV_ITEMS.map((item)=>(
-            <li className="text-white hover:text-white">
+           {NAV_ITEMS.map((item, i)=>(
+            <li key={i} className="text-white hover:text-white">
               <Link href={item.link} legacyBehavior>
                 <a className="text-lg">{item.name}</a>
               </Link>
