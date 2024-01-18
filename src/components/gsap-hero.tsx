@@ -1,8 +1,8 @@
 "use-client";
-import React, { useEffect, useRef } from 'react';
-import { gsap, Power3 } from 'gsap';
-import { TextPlugin } from 'gsap/TextPlugin';
-import Link from 'next/link';
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
+import Link from "next/link";
 
 // Register the TextPlugin with GSAP
 gsap.registerPlugin(TextPlugin);
@@ -25,7 +25,6 @@ const HeroSection: React.FC = () => {
       gsap.to(backgroundRef.current, {
         background: getRandomGradient(),
         duration: 1,
-        ease: Power3.easeInOut,
         onComplete: changeBackground,
       });
     };
@@ -36,7 +35,6 @@ const HeroSection: React.FC = () => {
       gsap.to(headerRef.current, {
         text: { value: statement },
         duration: 2.5,
-        ease: Power3.easeInOut,
         onComplete: () => {
           currentStatementIndex =
             (currentStatementIndex + 1) % statements.length;
@@ -46,22 +44,15 @@ const HeroSection: React.FC = () => {
 
     const getRandomGradient = () => {
       const gradients = [
-        'linear-gradient(to right, #4e54c8, #8f94fb)',
-        'linear-gradient(to right, #36d1dc, #5b86e5)',
-        'linear-gradient(to right, #00c6fb, #005bea)',
-        'linear-gradient(to right, #ff416c, #ff4b2b)',
+        "linear-gradient(to right, #4e54c8, #8f94fb)",
+        "linear-gradient(to right, #36d1dc, #5b86e5)",
+        "linear-gradient(to right, #00c6fb, #005bea)",
+        "linear-gradient(to right, #ff416c, #ff4b2b)",
       ];
 
-      const randomDarkSpot = Math.floor(Math.random() * 5);
+      const randomDarkSpot = Math.floor(Math.random() * gradients.length);
 
-      return gradients
-        .map((gradient, index) => {
-          if (index === randomDarkSpot) {
-            return `${gradient}, rgba(0, 0, 0, 0.5)`;
-          }
-          return gradient;
-        })
-        .join(', ');
+      return `${gradients[randomDarkSpot]}, rgba(0, 0, 0, 0.5)`;
     };
 
     // Set initial background gradient
@@ -79,19 +70,19 @@ const HeroSection: React.FC = () => {
     return () => {
       clearInterval(intervalId);
     };
-  }, []);
+  }, [headerRef, backgroundRef]);
 
   return (
     <section
-      className="h-screen flex flex-col items-center justify-center text-white relative overflow-hidden"
-      style={{ minHeight: '100vh' }}
+      className="h-screen flex flex-col items-center justify-center text-white relative overflow-hidden bg-gradient"
+      style={{ minHeight: "100vh" }}
       ref={backgroundRef}
     >
       <div className="text-center max-w-2xl">
         <h1
           ref={headerRef}
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight"
-          style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)' }}
+          style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.3)" }}
         ></h1>
         <p className="text-lg mb-8">
           Elevate your space with our precision painting services. Every stroke
