@@ -1,5 +1,4 @@
 "use client";
-// Top.js
 import Link from "next/link";
 import Image from "next/image";
 import mail from "../../public/mail.png";
