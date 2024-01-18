@@ -18,7 +18,7 @@ export default function Home() {
     reset,
   } = useForm<FormData>();
 
-  const onSubmit: SubmitHandler<FormData> = async (data) => {
+  const onSubmit = async (data:FormData) => {
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
