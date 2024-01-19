@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     });
     const mailOptions = {
       from: SMTP_EMAIL, // Your website's email address
-      to: email, // The email address provided by the person submitting the form
+      to: SMTP_EMAIL, // The email address provided by the person submitting the form
       subject: `New Contact Form Submission - ${subject}`,
       text: `
     Full Name: ${fullname}
