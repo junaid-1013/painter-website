@@ -1,49 +1,59 @@
 import Image from "next/image"
 
-import shopiy from "../../../public/Plumbers8.jpg"
-import customeWebApp from "../../../public/Tile2.jpg"
-import mobileApp from "../../../public/Mobile-App-Development.jpg"
-import digitalMarketing from "../../../public/electrical3.jpeg"
-import crmSoftware from "../../../public/services-4.jpg"
-import seo from "../../../public/services-5.jpg"
-
-
 const services = [
     {
-        image: shopiy,
-        alt: "Commercial Projects",
-        title: "Commercial Projects",
-        description: "Set up your online business with the best eCommerce platform, Shopify. As the top Shopify developers in Pakistan, we ensure the success of your online store."
+        image: "/interior.jpg",
+        alt: "Interior Painting",
+        title: "Interior Painting",
+        description: "We offer professional interior painting for residential and commercial spaces. Whether you need one room refreshed or a full home renovation, our experienced painters will prepare surfaces and apply high-quality paints and coatings with precision. You can trust us to transform the look of your interior with flawless finishes."
     },
     {
-        image: customeWebApp,
-        alt: "Restoration Projects",
-        title: "Restoration Projects",
-        description: "We are the leading web development company in Pakistan that provides end-to-end custom web app development solutions to solve your unique business challenges."
+        image: "/exterior.jpg",
+        alt: "Exterior Painting",
+        title: "Exterior Painting",
+        description: "Protect and beautify the outside of your home or business with our exterior painting services. Our team prepares all surfaces thoroughly before applying top-grade paint engineered to withstand weathering. You can rely on our attention to detail for durable, long-lasting finishes that enhance your property's appearance."
     },
     {
-        image: mobileApp,
-        alt: "Toxin Removal",
-        title: "Toxin Removal",
-        description: "We provide full-cycle mobile application development services to develop high-performing and feature-rich mobile apps for both Android and iOS devices."
+        image: "/doorpolish.jpg",
+        alt: "Door Polish",
+        title: "Door Polish",
+        description: "Give your doors a gleaming refresh with our polishing services. Whether made of wood, metal or fiber, we'll scrub away dirt and deeply condition surfaces. You'll love how our professional techniques transforms tired doors into stunning features that attract admiration."
     },
     {
-        image: digitalMarketing,
-        alt: "Residential Projects",
-        title: "Residential Projects",
-        description: "We offer digital marketing solutions such as SEO, Social Media Marketing, and Google Ads to help our clients achieve success with transformative marketing strategies."
+        image: "/tileflooring.jpg",
+        alt: "Tile Flooring",
+        title: "Tile Flooring",
+        description: "Whether you need backsplashes, bathrooms or large commercial floors, our team of tile experts can complete any flooring project. Our licensed tilers skillfully cut and lay each tile, ensuring flush seams. You can transform any interior floor space through our precision installation services."
     },
     {
-        image: crmSoftware,
-        alt: "Bathroom Cleaning",
-        title: "Bathroom Cleaning",
-        description: "CRM software (customer relationship management software) is a tool that's designed to help your organization offer your customers a unique and seamless experience"
+        image: "/plumbing.jpeg",
+        alt: "Plumbing Works",
+        title: "Plumbing Works",
+        description: "From new installations to repairs, our licensed plumbers provide residential and commercial services. We use high quality materials and adhere to all codes to complete any project professionally and ensure problem-free systems. You can rely on our experienced plumbers to keep your plumbing running smoothly."
     },
     {
-        image: seo,
-        alt: "Floor Renovation",
-        title: "Floor Renovation",
-        description: "We are heavily focused on search engine optimization and we provide the best solution to your every problem related to ranking higher, increasing organic traffic, and getting leads."
+        image: "/electrical.jpg",
+        alt: "Electrical Works",
+        title: "Electrical Works",
+        description: "We are your full-service electrical contractor for all residential and commercial needs. Our licensed electricians expertly install and service wiring systems, panels and fixtures to code. You can trust our experienced team to complete any electrical project with reliability, safety and precision."
+    },
+    {
+        image: "/gypsum.jpg",
+        alt: "Gypsum Partitions",
+        title: "Gypsum Partitions",
+        description: "Whether for homes or businesses, we expertly install gypsum board partitions and walls. Our team neatly cuts and fits sheets, applying compound for smooth joins. You can rely on our precision and attention to detail for partitions that meet building specifications and transform your space."
+    },
+    {
+        image: "/glass.jpg",
+        alt: "Glass Works",
+        title: "Glass Works",
+        description: "We expertly install sleek glass partitions for offices, as well as enclosures for meeting rooms or therapy spaces. Our team also fits premium folding/sliding glass doors for elegance, security and views. Trust our precise glass work to transform commercial and residential spaces."
+    },
+    {
+        image: "/ac.jpeg",
+        alt: "AC Ducts Maintenance and Cleaning",
+        title: "AC Ducts Maintenance and Cleaning",
+        description: "Keep your AC system performing efficiently year-round with our duct cleaning and maintenance services. We thoroughly clean and sanitize ducts, ensuring optimal airflow. Regular maintenance performed by our experts helps reduce energy costs and prevent unnecessary repairs down the road."
     },
 ];
 
@@ -54,9 +64,11 @@ const ServiceItem = ({ image, alt, title, description }: any) => (
         <div className="h-96 w-80">
             <Image
                 className="h-full w-full object-cover transition-transform duration-500 
-          group-hover:rotate-3 group-hover:scale-125"
+                group-hover:rotate-3 group-hover:scale-125"
                 src={image}
                 alt={alt}
+                width={1000}
+                height={1000}
             />
         </div>
 

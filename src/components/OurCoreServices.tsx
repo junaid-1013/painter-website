@@ -1,41 +1,34 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import shopiy from "../../public/electrical3.jpeg"
-import mobileApp from "../../public/Mobile-App-Development.jpg"
-import img1 from "../../public/services-5.jpg"
-import img2 from "../../public/services-4.jpg"
-
-
-
 const services = [
     {
-        image: shopiy,
-        alt: "Commercial Projects",
-        title: "Commercial Projects",
-        description: "Set up your online business with the best eCommerce platform, Shopify. As the top Shopify developers in Pakistan, we ensure the success of your online store."
+        image: "/interior.jpg",
+        alt: "Interior Painting",
+        title: "Interior Painting",
+        description: "We offer professional interior painting for residential and commercial spaces. Whether you need one room refreshed or a full home renovation, our experienced painters will prepare surfaces and apply high-quality paints and coatings with precision. You can trust us to transform the look of your interior with flawless finishes."
     },
     {
-        image: img1,
-        alt: "Restoration Projects",
-        title: "Restoration Projects",
-        description: "We are the leading web development company in Pakistan that provides end-to-end custom web app development solutions to solve your unique business challenges."
+        image: "/exterior.jpg",
+        alt: "Exterior Painting",
+        title: "Exterior Painting",
+        description: "Protect and beautify the outside of your home or business with our exterior painting services. Our team prepares all surfaces thoroughly before applying top-grade paint engineered to withstand weathering. You can rely on our attention to detail for durable, long-lasting finishes that enhance your property's appearance."
     },
     {
-        image: mobileApp,
-        alt: "TOXIN REMOVAL",
-        title: "TOXIN REMOVAL",
-        description: "We provide full-cycle mobile application development services to develop high-performing and feature-rich mobile apps for both Android and iOS devices."
+        image: "/doorpolish.jpg",
+        alt: "Door Polish",
+        title: "Door Polish",
+        description: "Give your doors a gleaming refresh with our polishing services. Whether made of wood, metal or fiber, we'll scrub away dirt and deeply condition surfaces. You'll love how our professional techniques transforms tired doors into stunning features that attract admiration."
     },
     {
-        image: img2,
-        alt: "Residential Projects",
-        title: "Residential Projects",
-        description: "We offer digital marketing solutions such as SEO, Social Media Marketing, and Google Ads to help our clients achieve success with transformative marketing strategies."
-    }
+        image: "/tileflooring.jpg",
+        alt: "Tile Flooring",
+        title: "Tile Flooring",
+        description: "Whether you need backsplashes, bathrooms or large commercial floors, our team of tile experts can complete any flooring project. Our licensed tilers skillfully cut and lay each tile, ensuring flush seams. You can transform any interior floor space through our precision installation services."
+    },
 ];
 
-const ServiceItem = ({ image, alt, title, description}: any) => (
+const ServiceItem = ({ image, alt, title, description }: any) => (
     <div className="group relative cursor-pointer items-center justify-center overflow-hidden 
         hover:shadow-xl hover:shadow-black/30 rounded-lg hover:-translate-y-3
         transition-all duration-500 transform-gpu">
@@ -45,6 +38,8 @@ const ServiceItem = ({ image, alt, title, description}: any) => (
           group-hover:rotate-3 group-hover:scale-125"
                 src={image}
                 alt={alt}
+                width={1000}
+                height={1000}
             />
         </div>
 
